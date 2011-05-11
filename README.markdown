@@ -41,13 +41,14 @@ Datalinks has been tested in Firefox 2, IE 6 and 7, and Opera 9.
 
 ## Installation
 
-Installation should be pretty simple. First, unpack all files to a chosen directory. Make sure that the `config.php`
-file is writable for PHP scripts (you may need to give full permissions to it to all users, just for the installation).
-Then open `install/install.php` in a browser, fill all the fields in the form and click "Install". The script should
-create two tables, one for categories and one for links, put one category (the root category) in the categories table,
-and update the `config.php` file. If everything is OK, a message "Installation successful!" will appear and you will be
-asked to delete the `install` directory. Then you can go to `index.php`, log in using the password you have given during
-the installation, and start adding new categories and links.
+Installation should be pretty simple. First, download
+[the latest zip](https://github.com/downloads/psionides/datalinks/datalinks-2.0.1.zip) and unpack all files to a chosen
+directory. Make sure that the `config.php` file is writable for PHP scripts (you may need to give full permissions to it
+to all users, just for the installation). Then open `install/install.php` in a browser, fill all the fields in the form
+and click "Install". The script should create two tables, one for categories and one for links, put one category (the
+root category) in the categories table, and update the `config.php` file. If everything is OK, a message "Installation
+successful!" will appear and you will be asked to delete the `install` directory. Then you can go to `index.php`, log in
+using the password you have given during the installation, and start adding new categories and links.
 
 If you want to change your password or other settings after installation, you can do that by editing `config.php` file.
 You should also make sure that this file won't be accessible for other users of your server (e.g. on Unix systems set
