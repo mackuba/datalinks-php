@@ -1,0 +1,95 @@
+Datalinks 2.0
+===================
+
+
+Introduction:
+-------------
+Datalinks is a web-based application for storing a collection of links (bookmarks), written in PHP. It allows you to
+store all your bookmarks in one place and access them in the same way, regardless if you work on your home computer,
+at school, at work, or in an Internet cafe. Links are assigned to categories, which can be arranged in a tree hierarchy.
+Information about links and categories is stored in two tables in a MySQL database.
+
+Through index.php page you can add, edit and delete both categories and links, and you can move links and categories
+from one category to another. Most of these actions are done through an AJAX request and do not require reloading of the
+page. To make any changes in the database you have to log in. You can also search the database for links and categories
+containing a given phrase (this doesn't require logging in).
+
+Normal categories use a blue folder icon and are visible for all visitors. If you want to hide some links, you can use
+one of two other kinds of categories: private (red) are visible on the lists, but regular users can't see their
+contents, while hidden (grey) aren't shown anywhere at all. Links and categories assigned to private or hidden
+categories (and their subcategories, and sub-subcategories, etc.) also don't show up on the search results page.
+
+When you delete a category, by default all links from that category and its subcategories aren't deleted, but are moved
+to its parent category. If you want to remove them together with the category, select the "Delete links too" option.
+
+If you want to change your password or other settings after installation, you can do that by editing config.php file.
+
+
+Requirements:
+-------------
+* WWW Server (e.g. Apache) with PHP and MySQL PHP module (tested with Apache 2.0.54 + PHP 4.3.10, should work with later
+versions, maybe with some earlier too)
+* MySQL database (not necessarily on the same server) - tested with v. 4.1.11, should work with later versions
+
+Datalinks has been tested in Firefox 2, IE 6 and 7, and Opera 9.
+
+
+Installation:
+-------------
+
+Installation should be pretty simple. First, unpack all files to a chosen directory. Make sure that the config.php file
+is writable for PHP scripts (you may need to give full permissions to it to all users, just for the installation). Then
+open install/install.php in a browser, fill all the fields in the form and click "Install". The script should create two
+tables, one for categories and one for links, put one category (the root category) in the categories table, and update
+the config.php file. If everything is OK, a message "Installation successful!" will appear and you will be asked to
+delete the "install" directory. Then you can go to index.php, log in using the password you have given during the
+installation, and start adding new categories and links.
+
+After the installation is finished, you should also make sure that the config.php file, which stores settings and
+database connection data, is not accessible for other users of your server (e.g. on Unix systems set its access rights
+to 600 or "rw-------"), unless the Apache server is configured in such a way that the application doesn't work if such
+permissions are set.
+
+Alternatively, if you want to create the tables and config file yourself - the table definitions are stored in
+doc/tables.sql file.
+
+
+Troubleshooting:
+----------------
+
+* If you get strange HTTP errors like 403 or 500, try changing some access rights to the datalinks directory or to .php
+files; if nothing works, consult the admin of your server (unless you're the admin, then you have a problem ;)
+* If you get logged out too often, find your main PHP configuration file (php.ini) and increase the session file
+lifetime (session.gc_maxlifetime option). Or consult your admin :)
+
+
+Known issues:
+-------------
+
+* Javascript sorts names containing non-ascii letters in a wrong way (MySQL does it right, so reloading the page usually
+helps)
+* dialogs look bad in Konqueror
+
+Licence:
+--------
+
+Datalinks uses GNU GPL licence, which means you can use it free of charge for any purposes, you can modify it as you
+want, just keep all the copyright notices. The full text of the licence is available in LICENCE file (although it's
+rather unreadable...). For a good explanation of the licence, check Wikipedia (or Google).
+
+
+Contact/credits:
+----------------
+
+Author: Jakub Suder <jakub.suder@gmail.com> (http://nexus.vrak.pl)
+Datalinks website: http://nexus.vrak.pl/datalinks
+
+Libraries used:
+* Simple DataBase Abstraction (Artemi Krymski <akrymski@gmail.com> / http://www.morewhite.com/sdba)
+* Script.aculo.us (Thomas Fuchs <thomas@fesch.at> / http://script.aculo.us)
+* Prototype (Sergio Pereira <sergio_pereira@msn.com> / http://www.prototypejs.org)
+* Nifty Cube (Alessandro Fulciniti <a.fulciniti@html.it> / http://www.html.it/articoli/niftycube/index.html)
+
+Icons have been "borrowed" from KDE icon theme "Crystal SVG" by Everaldo Coelho (http://everaldo.com/crystal.html) and
+from "macfox" Firefox theme by Kelly Cunningham (http://www.webether.com/macfox). Throbbers have been made using
+AjaxLoad generator (http://www.ajaxload.info).
