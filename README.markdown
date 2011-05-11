@@ -8,6 +8,8 @@ The name comes from one of the best games I've ever played,
 [Alpha Centauri](http://en.wikipedia.org/wiki/Sid_Meier's_Alpha_Centauri) (a sequel of Civilization). "The Datalinks"
 was the name for a future version of the Internet.
 
+<a href="http://psionides.github.com/datalinks/datalinks-screenshot.png"><img src="http://psionides.github.com/datalinks/datalinks-screenshot.png" width="880"></a>
+
 ## Introduction
 
 Datalinks is a web application for storing a collection of personal bookmarks, written in PHP. It allows you to
