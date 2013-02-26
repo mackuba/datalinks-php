@@ -8,7 +8,7 @@ The name comes from one of the best games I've ever played,
 [Alpha Centauri](http://en.wikipedia.org/wiki/Sid_Meier's_Alpha_Centauri) (a sequel of Civilization). "The Datalinks"
 was the name for a future version of the Internet.
 
-<a href="http://psionides.github.com/datalinks/datalinks-screenshot.png"><img src="http://psionides.github.com/datalinks/datalinks-screenshot.png" width="500"></a>
+<a href="http://jsuder.github.com/datalinks/datalinks-screenshot.png"><img src="http://jsuder.github.com/datalinks/datalinks-screenshot.png" width="500"></a>
 
 ## Introduction
 
@@ -42,7 +42,7 @@ Datalinks has been tested in Firefox 2, IE 6 and 7, and Opera 9.
 ## Installation
 
 Installation should be pretty simple. First, download
-[the latest zip](https://github.com/downloads/psionides/datalinks/datalinks-2.0.1.zip) and unpack all files to a chosen
+[the latest zip](https://github.com/downloads/jsuder/datalinks/datalinks-2.0.1.zip) and unpack all files to a chosen
 directory. Make sure that the `config.php` file is writable for PHP scripts (you may need to give full permissions to it
 to all users, just for the installation). Then open `install/install.php` in a browser, fill all the fields in the form
 and click "Install". The script should create two tables, one for categories and one for links, put one category (the
